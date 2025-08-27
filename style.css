@@ -1,0 +1,162 @@
+:root {
+    --orangered: #ff4500;
+    --grey-800: #1e293b;
+    --grey-900: #0f172a;
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+/* header family */
+h1,
+h2,
+h3 {
+    font-family: "Young Serif, serif";
+}
+/* end of headers family */
+
+/* 
+==========
+started his edit here
+========== 
+*/
+
+nav {
+    height: 100px;
+    background-color: var(--grey-800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 12%;
+    justify-content: space-around;
+
+}
+
+.nav-links {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar .logo:hover {
+    color: orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+    transform: scale(1.1);
+}
+
+span {
+    color: var(--orangered);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    font-family: "Young Serif", serif;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a#activee {
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+.navbar i {
+    fill: #fff;
+    color: #fff;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button {
+    margin-left: 80px;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    padding: 0 20px;
+    display: none;
+}
+
+/* 
+==========
+ended his edit here
+========== 
+*/
+
+/* media query for contact btn and mobile view */
+@media screen and (max-width: 840px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: var(--grey-900);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 50%;
+        padding: 20px 30px;
+        justify-content: left;
+    }
+    .open-sidebar-button {
+        padding: 0;
+        margin-left: 10rem;
+    }
+    .close-sidebar-button {
+        margin: 2rem 0 0 0.85rem;
+    }
+
+    .open-sidebar-button, .close-sidebar-button {
+        padding: 20px;
+        display: block;
+    }
+    #sidebar-active:checked ~ .nav-links {
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
+
+/* end of media query for contact btn and mobile view */
+
+
