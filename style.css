@@ -132,10 +132,6 @@ ended his edit here
         padding: 20px 30px;
         justify-content: left;
     }
-    .open-sidebar-button {
-        padding: 0;
-        margin-left: 10rem;
-    }
     .close-sidebar-button {
         margin: 2rem 0 0 0.85rem;
     }
@@ -158,5 +154,6 @@ ended his edit here
 }
 
 /* end of media query for contact btn and mobile view */
+
 
 
